@@ -2,13 +2,15 @@
 public class Robot
 {
     private double[] notas;
+    private int i;
     
     public Robot(int cantidadEst){
         notas = new double [cantidadEst];
     }
-    public void añadirNotas(double []n){
-        if (notas.length == n.length){
-            notas = n;
+    public void añadirNotas(double n){
+        if (i < notas.length){
+            notas[i] = n;
+            i++;
         }
     }
     public double promedioNotas(){
